@@ -18,3 +18,4 @@ Fitur - Fitur yang sedang berada di tahap perencanaan:
 14. Report Laporan -> Fitur ini berfungsi untuk user jika melihat ada laporan yang aneh atau palsu dapat menggunakan fitur ini.
 15. Ubah Status Laporan -> Fitur ini berguna agar user dapat mengetahui status laporan terbaru.
 16. Takedown Laporan -> Fitur ini hanya dapat digunakan oleh admin untuk takedown laporan jika terlalu banyak report.
+17. Pencarian Laporan -> Fitur ini berfungsi saat user ingin mencari laporan yang ingin diketahuinya.
