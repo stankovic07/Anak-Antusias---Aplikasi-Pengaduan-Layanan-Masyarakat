@@ -1,5 +1,6 @@
 # Anak-Antusias---Aplikasi-Pengaduan-Layanan-Masyarakat
 Repository ini berisi daftar fitur-fitur yang akan dikembangkan kedalam aplikasi kami kedepannya.
+Note : Mohon dibaca excelnya ya bagi anggota kelompok dan kepada Pak Kelvin, karena kami menyimpan informasi projek dan timeline di excel Anak Antusias - Rincian Projek.xlsx
 
 Fitur - Fitur yang sedang berada di tahap perencanaan: 
 1. Login/Register  -> Fitur ini berfungsi untuk mengautentikasi user agar dapat menggunakan sistem sesuai role user dan admin.
