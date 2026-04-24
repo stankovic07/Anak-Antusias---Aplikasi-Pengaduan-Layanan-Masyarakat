@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Anak-Antusias---Aplikasi-Pengaduan-Layanan-Masyarakat
 Aplikasi Pengaduan Layanan Masyarakat adalah platform pengaduan masalah bagi masyarakat secara gratis dan terbuka. Masyarakat dalam melaporkan berbagai masalah yang dialami ke dalam aplikasi kami.
 
@@ -20,3 +21,6 @@ Fitur - Fitur yang sedang berada di tahap perencanaan:
 16. Takedown Laporan -> Fitur ini hanya dapat digunakan oleh admin untuk takedown laporan jika terlalu banyak report.
 17. Pencarian Laporan -> Fitur ini berfungsi saat user ingin mencari laporan yang ingin diketahuinya.
 18. Fitur Chatbot -> Fitur ini berfungsi untuk user bertanya kendala yang dialami yang akan dibantu oleh bot.
+=======
+# SmartCity-Project
+>>>>>>> 4e7a185 (Initial commit)
