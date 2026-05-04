@@ -180,7 +180,7 @@ document.getElementById('saveEditBtn').addEventListener('click', async () => {
   }
 });
 
-// ---------- Delete Report ----------
+// hapus report
 async function deleteMyReport(id) {
   if (!confirm('Hapus laporan ini?')) return;
   try {
@@ -196,7 +196,7 @@ async function deleteMyReport(id) {
   }
 }
 
-// Expose to inline onclick
+// tampilkan inline ketika ditekan
 window.openEditModal = openEditModal;
 window.deleteMyReport = deleteMyReport;
 window.viewFullImage = viewFullImage;
