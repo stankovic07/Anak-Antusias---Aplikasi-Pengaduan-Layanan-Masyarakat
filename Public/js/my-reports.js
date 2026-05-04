@@ -180,7 +180,7 @@ document.getElementById('saveEditBtn').addEventListener('click', async () => {
   }
 });
 
-// hapus report
+// hapus laporan
 async function deleteMyReport(id) {
   if (!confirm('Hapus laporan ini?')) return;
   try {
