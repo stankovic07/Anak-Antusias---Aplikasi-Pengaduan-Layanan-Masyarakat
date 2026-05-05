@@ -1,26 +1,123 @@
-<<<<<<< HEAD
-# Anak-Antusias---Aplikasi-Pengaduan-Layanan-Masyarakat
-Aplikasi Pengaduan Layanan Masyarakat adalah platform pengaduan masalah bagi masyarakat secara gratis dan terbuka. Masyarakat dalam melaporkan berbagai masalah yang dialami ke dalam aplikasi kami.
+```markdown
+# Smart City – Aplikasi Pengaduan Warga
 
-Fitur - Fitur yang sedang berada di tahap perencanaan: 
-1. Login/Register  -> Fitur ini berfungsi untuk mengautentikasi user agar dapat menggunakan sistem sesuai role user dan admin.
-2. Profil -> Fitur ini digunakan untuk melihat dan mengelola informasi pribadi.
-3. Pembuatan Laporan -> Fitur terpenting di aplikasi ini untuk membuat laporan keluhan / masalah user agar dapat diselesaikan.
-4. Upload Gambar -> Fitur ini dapat digunakan saat pembuatan laporan untuk memperkuat bukti, gambar barang ingin dicari, dll.
-5. Kategori Laporan -> Fitur ini dapat digunakan untuk menjelaskan bahwa laporan ini tentang apa, misal elektronik, dll.
-6. Status Laporan -> Fitur ini berfungsi agar user dapat mengetahui status laporan yang dibuatnya sudah sampai tahap mana.
-7. Komentar -> Fitur ini berguna terhadap sesama user, jika ada user lain yang menemukan petunjuk atas laporan user lain.
-8. Dashboard -> Halaman utama dari aplikasi pengaduan layanan masyarakat.
-9. Filter Laporan -> Fitur ini berguna untuk memfilter laporan agar mempermudah pencarian.
-10. Notifikasi -> Fitur ini berfungsi agar user dapat menerima pemberitahuan laporan terbaru yang pernah dibuat atau ada berita terbaru.
-11. Riwayat Laporan -> Fitur ini berguna untuk user agar dapat melihat laporan apa saja yang pernah dibuat dan diselesaikan.
-12. Edit / Hapus Laporan -> Fitur ini berguna saat user ingin memperbaiki laporan yang pernah ia buat sebelumnya.
-13. Verfikasi Laporan -> Fitur ini berfungsi saat user buat laporan agar dipastikan laporan yang dibuat nyata dan bukan palsu.
-14. Report Laporan -> Fitur ini berfungsi untuk user jika melihat ada laporan yang aneh atau palsu dapat menggunakan fitur ini.
-15. Ubah Status Laporan -> Fitur ini berguna agar user dapat mengetahui status laporan terbaru.
-16. Takedown Laporan -> Fitur ini hanya dapat digunakan oleh admin untuk takedown laporan jika terlalu banyak report.
-17. Pencarian Laporan -> Fitur ini berfungsi saat user ingin mencari laporan yang ingin diketahuinya.
-18. Fitur Chatbot -> Fitur ini berfungsi untuk user bertanya kendala yang dialami yang akan dibantu oleh bot.
-=======
-# SmartCity-Project
->>>>>>> 4e7a185 (Initial commit)
+Aplikasi web full‑stack untuk pelaporan dan manajemen masalah perkotaan.  
+Warga dapat membuat laporan, memberi vote, mengomentari, dan memantau status penanganan.  
+Admin memiliki panel untuk mengelola laporan, fasilitas, notifikasi, dan melihat statistik.
+
+## Teknologi
+
+- **Backend:** Node.js, Express, Sequelize ORM (MySQL), Multer (upload), bcrypt
+- **Frontend:** HTML, CSS, JavaScript, Bootstrap 5, Tailwind CSS (halaman fasilitas)
+- **Database:** MySQL / MariaDB
+
+## Prasyarat
+
+| Perangkat | Keterangan |
+|-----------|------------|
+| [Node.js](https://nodejs.org/) | Versi 18 atau lebih baru |
+| [MySQL](https://dev.mysql.com/downloads/) | XAMPP, Laragon, atau server MySQL sendiri |
+| [Git](https://git-scm.com/) | Untuk clone repository |
+
+## Instalasi
+
+1. **Clone repository**
+   ```bash
+   git clone <url-repository>
+   cd smartcity-project
+   ```
+
+2. **Install dependency**
+   ```bash
+   npm install
+   ```
+
+3. **Buat database**
+   - Buka MySQL (phpMyAdmin, MySQL Workbench, dll.)
+   - Buat database baru bernama `smart_city_db`
+   - Import file `smart_city_db.sql` yang ada di root proyek
+
+4. **Atur konfigurasi environment**
+   - Salin file `.env.example` menjadi `.env`:
+     ```bash
+     cp .env.example .env
+     ```
+   - Edit `.env` sesuai pengaturan MySQL Anda:
+     ```env
+     DB_HOST=localhost
+     DB_USER=root
+     DB_PASS=
+     DB_NAME=smart_city_db
+     DB_PORT=3306
+     SESSION_SECRET=rahasia123
+     ```
+
+5. **Jalankan server**
+   ```bash
+   nodemon server.js
+   ```
+   atau
+   ```bash
+   node server.js
+   ```
+
+6. **Buka di browser**
+   ```
+   http://localhost:3000
+   ```
+
+## Akun Uji (Seeder)
+
+| Peran  | Email                  | Password      |
+|--------|------------------------|---------------|
+| Admin  | admin@smartcity.local   | admin123      |
+| Warga  | andi@warga.com          | password123   |
+| Warga  | siti@warga.com          | password123   |
+| Warga  | budi@warga.com          | password123   |
+| Warga  | dewi@warga.com          | password123   |
+
+## Struktur Proyek (ringkas)
+
+```
+.
+├── config/          # Konfigurasi database (Sequelize)
+├── controllers/     # Logic API (report, comment, dll.)
+├── middleware/       # isAuth, isAdmin
+├── models/          # Sequelize models
+├── public/          # Static files (HTML, CSS, JS, gambar)
+│   ├── css/
+│   ├── js/
+│   ├── pages/       # Halaman citizen & admin
+│   ├── script/      # navbar.js universal
+│   └── img/
+├── routes/          # Route handler
+├── uploads/         # Direktori upload gambar (terabaikan Git)
+├── .env.example     # Template konfigurasi environment
+├── server.js        # Entry point aplikasi
+└── smart_city_db.sql # Dump database untuk seeder
+```
+
+## Fitur Utama
+
+- Registrasi & login warga/admin
+- Dashboard admin (statistik, top‑5 laporan, notifikasi)
+- Manajemen fasilitas (CRUD + gambar)
+- Pencarian laporan dengan filter & load‑more
+- Detail laporan dengan navbar dinamis (admin/warga)
+- Voting, flagging (tandai), dan komentar bersarang
+- Pembatasan akses berbasis role (server middleware + client guard)
+- Upload & penghapusan gambar laporan
+- Edit profil, ganti password, hapus akun
+- Session logout dan proteksi halaman
+
+## Catatan
+
+- File `.env` **tidak** dikomit ke Git (tercantum di `.gitignore`).
+- Folder `uploads/` (gambar laporan) juga diabaikan – akan dibuat otomatis saat upload pertama.
+
+
+## Lisensi
+
+Proyek ini dibuat untuk keperluan akademik (UTS).
+
+```
