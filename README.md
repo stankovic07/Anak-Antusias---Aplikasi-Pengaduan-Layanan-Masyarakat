@@ -120,6 +120,8 @@ Admin memiliki panel untuk mengelola laporan, fasilitas, notifikasi, dan melihat
 
 Proyek ini dibuat untuk keperluan akademik (UTS).
 
-```
+## Link Video Kami :
 
-## LINK VIDEO KAMI : https://mikroskilacid-my.sharepoint.com/:v:/g/personal/stan_kovic_students_mikroskil_ac_id/IQADqJkrkYY-R4F77xLQgOrwAcXZo2cpsNSNCZhCqluhQrg?e=5Y7wOI
+https://mikroskilacid-my.sharepoint.com/:v:/g/personal/stan_kovic_students_mikroskil_ac_id/IQADqJkrkYY-R4F77xLQgOrwAcXZo2cpsNSNCZhCqluhQrg?e=5Y7wOI
+
+```
